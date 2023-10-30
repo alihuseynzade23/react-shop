@@ -8,7 +8,7 @@ function Header() {
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                     <li>
                         <a
-                            href="https://github.com/alihuseynzade23/react-movies"
+                            href="https://github.com/alihuseynzade23/react-shop"
                             target="_blank"
                         >
                             Repo

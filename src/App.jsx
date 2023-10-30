@@ -1,5 +1,3 @@
-import { useState } from "react";
-import "./app.css";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Shop } from "./components/Shop";
