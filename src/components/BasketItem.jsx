@@ -1,26 +1,23 @@
+import { useContext } from "react";
+import { ShopContext } from "../context";
 function BasketItem(props) {
-    const {
-        id,
-        name,
-        price,
-        quantity,
-        removeFromBasket = Function.prototype,
-        increment = Function.prototype,
-        decrement = Function.prototype,
-    } = props;
+    const { id, name, price, quantity } = props;
+
+    const { removeFromBasket, incQuantity, decQuantity } =
+        useContext(ShopContext);
     return (
         <li className="collection-item">
             {name}{" "}
             <i
                 className="material-icons btn basket-button"
-                onClick={() => decrement(id)}
+                onClick={() => decQuantity(id)}
             >
                 remove
             </i>
             x{quantity}
             <i
                 className="material-icons btn basket-button"
-                onClick={() => increment(id)}
+                onClick={() => incQuantity(id)}
             >
                 add
             </i>
@@ -36,9 +33,3 @@ function BasketItem(props) {
 }
 
 export { BasketItem };
-
-// window.addEventListener("click", (event) => {
-//     if (event.target === popup) {
-//         closePopup();
-//     }
-// });
